@@ -1,27 +1,113 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    max-width: 1200px; 
+    margin: 0 auto;
+    background-color: #f2e07a;
 }
 
-header {
-    background-image: linear-gradient(135deg, grey 0%, red 100%);
-    /*Buscar colores RGB que sea perfecto para el sitio*/
-    color: white;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    box-shadow: 0 2px 10px;
-    /*Buscar valores acordes..*/
+
+.encabezado {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-.Logo {
-    font-size: 1.8re
+.logo {
+    display: flex;
+    background-color: black;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen {
+   
+    background-image: url("./img/Pandacircular2.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+
+
+.barraNavegacion {
+   
+    background-color: black;
+    padding: 20px;
+    margin-top: 0;
+    font-size: 18px;
+    font-family: 'Comic Sans MS', cursive; 
+    
+    display: flex;
+    
+    align-items: center; 
+    height: 10px;
+}
+
+.barraNavegacion ul {
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+   
+    justify-content: space-around; 
+    width: 100%; 
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: #ffd700; 
+}.form{
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: rgb(24, 24, 24);
+  box-shadow: 10px 10px 10px grey;
+  gap: 20px;
+}.form label,h2 {
+  color: aliceblue;
+  margin-left: 5px;
+  min-width: 100px;
+}.form input{
+  background-color: rgb(24, 24, 24);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid aliceblue;
+}.form div{
+  display: flex;
+  flex-direction: row;
+}#boton {
+     color: aliceblue;
+    text-decoration: none;
+    /* Transición suave para el efecto hover */
+    transition: color 0.3s ease;
+  border: solid;
+  margin-left: 50px;
+  padding: 5px;
+}#boton:hover{
+    color: #ffd700;
+  scale: 120%;
+}.articulo {
+    color: aliceblue;
+    width: 400px;
+    background-image: linear-gradient(45deg, black,rgb(28, 28, 28), grey);
+    border-radius: 5px;
+padding: 5px;
 }
