@@ -4,68 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panda Gastronomía - El Arte de las Buenas Comidas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header class="encabezado">
-        <div class="logo"> 
-            <div id="imagen"></div>     
+        <div class="logo">
+            <div id="imagen"></div>
         </div>
-        
-        <nav class="barraNavegacion">
-       
-        <ul>
-            <li><a href="#Inicio">Inicio</a></li>
-            <li><a href="#Servicios">Servicios</a></li>
-            <li><a href="#Productos">Menú</a></li>
-            <li><a href="#Testimonios">Testimonios</a></li>
-            <li><a href="./paginaContacto/contacto.html">Contacto</a></li>
-            <li><a href="./paginaArticulo/sobreNosotros.html">Sobre Nosotros</a></li>
-        </ul>
-    </nav>
 
-    <section id="Inicio">
-        <div>
-            <h1>El arte de las buenas comidas</h1>
-            <p>Somos una empresa que ofrece excelente servicios de comidas, catering, etc...</p>
-            <a href="contacto" class="btn">Solicitar Cotización</a>
+        <nav class="barraNavegacion">
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Servicios">Servicios</a></li>
+                <li><a href="#Productos">Menú</a></li>
+                <li><a href="#Testimonios">Testimonios</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="./paginaArticulo/sobreNosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Inicio" class="hero">
+        <div class="hero-content">
+            <h1>El Arte de las Buenas Comidas</h1>
+            <p>Transformamos cada evento en una experiencia gastronómica memorable. Excelencia en catering, organización
+                de eventos y comidas preparadas.</p>
+            <a href="#Contacto" class="btn">Solicitar Cotización</a>
         </div>
     </section>
 
     <section id="Servicios">
         <h2>Nuestros Servicios</h2>
-        <ul>
-            <li>Organización Integral de Eventos</li>
-            <li>Servicio de Catering</li>
-            <li>Capacitaciones de personal</li>
-            <li>Asesoramiento Gastronómico</li>
-            <li>Comidas Preparadas</li>
-        </ul>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <span class="servicio-icon">🎉</span>
+                <h3>Organización Integral de Eventos</h3>
+                <p>Planificamos y ejecutamos eventos corporativos, sociales y especiales con atención a cada detalle
+                    para que tu celebración sea perfecta.</p>
+            </div>
+            <div class="servicio-card">
+                <span class="servicio-icon">🍽️</span>
+                <h3>Servicio de Catering</h3>
+                <p>Catering personalizado para bodas, cumpleaños, eventos empresariales y celebraciones especiales con
+                    la más alta calidad.</p>
+            </div>
+            <div class="servicio-card">
+                <span class="servicio-icon">👨‍🍳</span>
+                <h3>Capacitaciones de Personal</h3>
+                <p>Formación profesional en gastronomía, servicio al cliente y gestión de eventos para elevar el nivel
+                    de tu equipo.</p>
+            </div>
+            <div class="servicio-card">
+                <span class="servicio-icon">📋</span>
+                <h3>Asesoramiento Gastronómico</h3>
+                <p>Consultoría especializada en desarrollo de menús, gestión de cocina y optimización de procesos
+                    gastronómicos.</p>
+            </div>
+            <div class="servicio-card">
+                <span class="servicio-icon">🥘</span>
+                <h3>Comidas Preparadas</h3>
+                <p>Platos elaborados con ingredientes frescos y de calidad, listos para disfrutar en casa o en tu
+                    negocio.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="#Productos">
+    <section id="Productos">
         <h2>Productos Destacados</h2>
-        <div>
-            <h3><b>Pastas Frescas y Congeladas</b></h3>
+        <div class="productos-grid">
+            <div class="producto-categoria">
+                <h3>🍝 Pastas Frescas y Congeladas</h3>
+                <ul>
+                    <li>Sorrentinos de Jamón y Queso</li>
+                    <li>Sorrentinos de Queso Azul</li>
+                    <li>Sorrentinos Veganos</li>
+                    <li>Raviolones de Cerdo</li>
+                    <li>Ñoquis Caseros</li>
+                </ul>
+            </div>
+            <div class="producto-categoria">
+                <h3>🍞 Panificados Artesanales</h3>
+                <ul>
+                    <li>Pizzas Individuales</li>
+                    <li>Pizzas Integrales</li>
+                    <li>Panes de Papa</li>
+                    <li>Focaccias Gourmet</li>
+                    <li>Pan de Campo</li>
+                </ul>
+            </div>
         </div>
-        <ul>
-            <li>Sorrentinos de jamón y queso</li>
-            <li>Sorrentinos de Queso Azul</li>
-            <li>Sorrentinos de Vegano</li>
-            <li>Raviolones de Cerdo</li>
-            <li>Ñoquis</li>
-        </ul>
-        <div>
-            <h3>Panificados</h3>
-        </div>
-        <ul>
-            <li>Pizzas Individuales</li>
-            <li>Pizzas Integrales</li>
-            <li>Panes de papas</li>
-        </ul>
     </section>
+
+    <section id="Testimonios" class="testimonios-section">
+        <h2>Testimonios</h2>
+        <div class="testimonios-grid">
+            <div class="testimonio-card">
+                <p class="testimonio-texto">"Contratamos a Panda Gastronomía para nuestra boda y superaron todas
+                    nuestras expectativas. La comida fue exquisita y el servicio impecable."</p>
+                <p class="testimonio-autor">— María González</p>
+            </div>
+            <div class="testimonio-card">
+                <p class="testimonio-texto">"El catering corporativo que nos brindaron fue excepcional. Nuestros
+                    clientes quedaron encantados con la presentación y los sabores."</p>
+                <p class="testimonio-autor">— Roberto Martínez, CEO</p>
+            </div>
+            <div class="testimonio-card">
+                <p class="testimonio-texto">"Las pastas frescas son increíbles. Compramos semanalmente y la calidad
+                    siempre es consistente. ¡Altamente recomendados!"</p>
+                <p class="testimonio-autor">— Laura Fernández</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contacto" class="contacto-section">
+        <h2>Contáctenos</h2>
+        <div class="contacto-container">
+            <form action="" id="form" name="form" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" name="mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="consulta">Consulta</label>
+                    <textarea id="consulta" name="consulta" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#Inicio">Inicio</a>
+                <a href="#Servicios">Servicios</a>
+                <a href="#Productos">Productos</a>
+                <a href="#Contacto">Contacto</a>
+                <a href="./paginaArticulo/sobreNosotros.html">Sobre Nosotros</a>
+            </div>
+            <p>&copy; 2024 Panda Gastronomía. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
