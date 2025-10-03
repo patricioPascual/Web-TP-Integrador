@@ -18,15 +18,15 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: var(--color-texto);
-  background-color: #f9f9f9;
+  color: #333;
+  background-color: var( --color-texto-claro);
   margin: 0;
   padding: 0;
 }
 
 /* Header */
 .encabezado {
-  background: linear-gradient(135deg, var(--color-primario) 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -35,7 +35,7 @@ body {
 
 .logo {
   display: flex;
-  background-color: var(--color-primario);
+  background-color: #1a1a1a;
   height: 150px;
   justify-content: center;
   align-items: center;
@@ -409,7 +409,7 @@ h2::after {
   box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
 
-/* Footer */
+
 footer {
   background: var(--color-primario);
   color: var(--color-texto-claro);
