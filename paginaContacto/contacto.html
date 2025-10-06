@@ -9,35 +9,46 @@
 </head>
 
 <body>
-    <div class="barraNavegacion">
-        <div><a href="../index.html">Inicio</a></div>
-        <div><a href="../paginaArticulo/sobreNosotros.html">Sobre Nosotros</a></div>
-    </div>
-
-    <form action="" id="form" name="form">
-        <div>
-            <h2>Contáctenos</h2>
-        </div>
-        <div>
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre">
-        </div>
-        <div>
-            <label for="telefono">Telefono</label>
-            <input type="tel" name="telefono">
-        </div>
-        <div>
-            <label for="mail">Email</label>
-            <input type="email">
-        </div>
-        <div>
-            <label for="consulta">Consulta</label>
-            <textarea name="consulta" id="consulta">
-
-       </textarea>
+   <header class="encabezado">
+        <div class="logo">
+            <div id="imagen"></div>
         </div>
 
-    </form>
+        <nav class="barraNavegacion">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html#Servicios">Servicios</a></li>
+                <li><a href="../index.html#Productos">Menú</a></li>
+                <li><a href="../index.html#Testimonios">Testimonios</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="../paginaArticulo/sobreNosotros.html">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Contacto" class="contacto-section">
+   <h2>Contáctenos</h2>
+        <div class="contacto-container">
+            <form action="" id="form" name="form" >
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" name="mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="consulta">Consulta</label>
+                    <textarea id="consulta" name="consulta" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Consulta</button>
+            </form>
+        </div>
+        </section>
 </body>
 
 </html>

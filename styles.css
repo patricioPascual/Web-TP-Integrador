@@ -59,7 +59,7 @@ body {
   box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
 }
 
-/* Navegación */
+/* Navegacion */
 .barraNavegacion {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
@@ -102,10 +102,10 @@ body {
   box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZjJlMDdhIi8+PC9zdmc+') center/cover;
+  background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.6), rgba(188, 201, 18, 0.6));
+  
   padding: 120px 20px;
   text-align: center;
   color: var(--color-texto-claro);
@@ -121,17 +121,17 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 56px;
   margin-bottom: 20px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
-  animation: fadeInUp 1s ease-out;
+  
 }
 
 .hero p {
   font-size: 1.3rem;
   margin-bottom: 30px;
   line-height: 1.8;
-  animation: fadeInUp 1s ease-out 0.2s backwards;
+ 
 }
 
 .btn {
@@ -142,10 +142,10 @@ body {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 17px;
   transition: var(--transicion);
   box-shadow: var(--sombra);
-  animation: fadeInUp 1s ease-out 0.4s backwards;
+ 
 }
 
 .btn:hover {
@@ -166,7 +166,7 @@ section:nth-child(even) {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   text-align: center;
   margin-bottom: 50px;
   color: var(--color-primario);
@@ -216,13 +216,13 @@ h2::after {
 }
 
 .servicio-icon {
-  font-size: 3rem;
+  font-size: 48px;
   margin-bottom: 20px;
   display: block;
 }
 
 .servicio-card h3 {
-  font-size: 1.5rem;
+  font-size: 22px;
   margin-bottom: 15px;
   color: var(--color-primario);
 }
@@ -230,7 +230,7 @@ h2::after {
 .servicio-card p {
   color: #666;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 /* Productos */
@@ -260,7 +260,7 @@ h2::after {
 }
 
 .producto-categoria h3 {
-  font-size: 1.8rem;
+  font-size: 30px;
   color: var(--color-primario);
   margin-bottom: 25px;
   padding-bottom: 15px;
@@ -276,14 +276,14 @@ h2::after {
   padding-left: 30px;
   position: relative;
   color: var(--color-texto);
-  font-size: 1.05rem;
+  font-size: 17px;
 }
 
 .producto-categoria li::before {
   content: '🍜';
   position: absolute;
   left: 0;
-  font-size: 1.2rem;
+  font-size: 19px;
 }
 
 /* Testimonios */
@@ -351,6 +351,7 @@ h2::after {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  
 }
 
 .form-group {
@@ -362,7 +363,7 @@ h2::after {
   margin-bottom: 8px;
   color: var(--color-secundario);
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 17px;
 }
 
 .form-group input,
@@ -373,7 +374,7 @@ h2::after {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   color: var(--color-texto-claro);
-  font-size: 1rem;
+  font-size: 16px;
   transition: var(--transicion);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -397,7 +398,7 @@ h2::after {
   color: var(--color-primario);
   border: none;
   border-radius: 30px;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: var(--transicion);
@@ -444,63 +445,21 @@ footer p {
   margin-top: 20px;
   opacity: 0.8;
 }
-
-/* Animaciones */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .barraNavegacion ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .barraNavegacion li {
-    margin: 5px 0;
-  }
-
-  .contacto-container {
-    padding: 30px 20px;
-  }
-
-  section {
-    padding: 60px 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero {
-    padding: 80px 15px;
-  }
-
-  .servicio-card,
-  .producto-categoria {
-    padding: 25px 20px;
-  }
+/*SOBRE NOSOTROD*/
+.articulo-individual{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  
+}.articulos{
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}.titulo-articulo{
+  min-height: 200px;
+  
 }
