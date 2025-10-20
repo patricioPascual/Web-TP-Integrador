@@ -28,29 +28,29 @@
     <section id="Contacto" class="contacto-section">
    <h2>Contáctenos</h2>
         <div class="contacto-container">
-            <form action="" id="form" name="form" >
+            <form action="" id="form" name="form" novalidate onsubmit="return validar()">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" >
                 </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono" required>
+                    <input type="tel" id="telefono" name="telefono" >
                 </div>
                 <div class="form-group">
                     <label for="mail">Email</label>
-                    <input type="email" id="mail" name="mail" required>
+                    <input type="email" id="mail" name="mail" >
                 </div>
                 <div class="form-group">
                     <label for="consulta">Consulta</label>
-                    <textarea id="consulta" name="consulta" required></textarea>
+                    <textarea id="consulta" name="consulta" ></textarea>
                 </div>
                 <button type="submit" class="btn-submit">Enviar Consulta</button>
             </form>
         </div>
         </section>
 
-        <src src="/js/validaciones.js" defer></src>
+     <script  src="../js/validaciones.js" defer></script>   
 </body>
 
 </html>

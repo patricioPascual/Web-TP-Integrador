@@ -1,36 +1,92 @@
-function validateForm() {
+function validar() {
     
-    let nombre = document.forms["form"]["nombre"].value;
-    let telefono = document.forms["form"]["telefono"].value;
-    let mail = document.forms["form"]["mail"].value;
-    let consulta = document.forms["form"]["consulta"].value;
-
-    //.trim() Sirve para eliminar espacios en blanco al inicio y al final. "tuve que añadirlo ya que sin ello me estaba dando problemas"
-    //Así, un campo con solo espacios se considerará vacío.
+    let nombre = document.forms["form"]["nombre"];
+    let telefono = document.forms["form"]["telefono"];
+    let mail = document.forms["form"]["mail"];
+    let consulta = document.forms["form"]["consulta"];
     
-    if (nombre.trim() == "") {
-        alert("Por favor, completa el campo Nombre.");
-        // return false detiene el envío del formulario.
-        return false; 
+    const regexNombre= /^[A-Za-z\s]+$/
+    const regexTel=/^\+?[0-9]{7,20}$/
+    const regexMail= /^\w+@\w+\.com(\.ar)?$/
+    const regexConsulta= /^[\s\S]{10,150}$/
+    if (regexNombre.test(nombre.value)) {
+        nombre.style.color='white'; 
+        nombre.style.backgroundColor = '';
+
+    }else{
+        nombre.style.color='red';
+        nombre.style.backgroundColor='white';
     }
 
-    if (telefono.trim() == "") {
-        alert("Por favor, completa el campo Teléfono.");
-        return false;
+    if (regexTel.test(telefono.value)) {
+        
+        telefono.style.color='white';
+        telefono.style.backgroundColor = '';
+    }else{
+        telefono.style.color='red';
+        telefono.style.backgroundColor='white';
     }
 
-    if (mail.trim() == "") {
-        alert("Por favor, completa el campo Email.");
-        return false;
+    if (regexMail.test(mail.value)) {
+       mail.style.color='white';
+       mail.style.backgroundColor = '';
+
+    }else{
+        mail.style.color='red';
+         mail.style.backgroundColor='white';
     }
 
-    if (consulta.trim() == "") {
-        alert("Por favor, escribe tu Consulta.");
-        return false;
+    if (regexConsulta.test(consulta.value)) {
+       consulta.style.color='white';
+       consulta.style.backgroundColor = '';
+    }else{
+        consulta.style.color='red';
+         consulta.style.backgroundColor='white';
     }
 
-    // Si todas las validaciones pasan, la función termina sin retornar 'false',
-    // permitiendo que el formulario se envíe.
-    alert("¡Consulta enviada!");
-    return true;
+    
+    return false;
 }
+
+const ARREGLO_DE_IMAGENES = [
+    'img/sushi.jpg',
+    'img/sushi2.jpg',
+    'img/plato.jpg',
+    'img/canapes.jpg'
+];
+
+
+
+let posicionActual = 0; 
+
+function actualizarImagen() {
+    
+    const imgElemento = document.getElementById('carrusel-imagen');
+    
+    
+    imgElemento.src = ARREGLO_DE_IMAGENES[posicionActual];
+}
+
+function irAtras() {
+  
+    if (posicionActual === 0) {
+        posicionActual = ARREGLO_DE_IMAGENES.length - 1; 
+    } else {
+       
+        posicionActual--;
+    }
+    actualizarImagen();
+}
+
+function irSiguiente() {
+    
+    if (posicionActual === ARREGLO_DE_IMAGENES.length - 1) {
+        posicionActual = 0;
+    } else {
+       
+        posicionActual++;
+    }
+    actualizarImagen();
+}
+actualizarImagen();
+

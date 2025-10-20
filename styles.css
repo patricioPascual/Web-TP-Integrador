@@ -1,4 +1,4 @@
-/* Reset y Variables */
+
 * {
   margin: 0;
   padding: 0;
@@ -103,7 +103,7 @@ body {
 }
 
 /* Hero */
-.hero {
+.introduccion {
   background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.7), rgba(52, 220, 27, 0.7));
   
   padding: 120px 20px;
@@ -115,19 +115,19 @@ body {
   justify-content: center;
 }
 
-.hero-content {
+.introduccion-c {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.hero h1 {
+.introduccion h1 {
   font-size: 56px;
   margin-bottom: 20px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   
 }
 
-.hero p {
+.introduccion p {
   font-size: 1.3rem;
   margin-bottom: 30px;
   line-height: 1.8;
@@ -292,13 +292,11 @@ h2::after {
   color: var(--color-texto-claro);
 }
 
-.testimonios-section h2 {
+ h2 {
   color: var(--color-texto-claro);
 }
 
-.testimonios-section h2::after {
-  background: var(--color-acento);
-}
+
 
 .testimonios-grid {
   display: grid;
@@ -465,4 +463,17 @@ footer p {
   
 }.titulo-articulo h2{
   color: var(--color-secundario);
+}
+.carrusel{
+display: flex;
+gap: 20px;
+width: 100%;
+justify-content: center;
+align-items: center;
+}.carrusel button{
+  font-weight: bolder;
+  width: 70px;
+  background-color: #ffd700;
+  border-radius: 20px;
+  
 }
