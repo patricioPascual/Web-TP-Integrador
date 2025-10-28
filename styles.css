@@ -20,12 +20,11 @@ body {
   background-color: #1a1a1a;
   line-height: 1.6;
   color: #333;
-  /*background-color: var( --color-texto-claro);*/
   margin: 0;
   padding: 0;
 }
 
-/* Header */
+
 .encabezado {
  background-image: url( "./bamboo.jpg");
   position: sticky;
@@ -59,7 +58,7 @@ body {
   box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
 }
 
-/* Navegacion */
+
 .barraNavegacion {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
@@ -71,18 +70,13 @@ body {
 
 .barraNavegacion ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+ 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 15px 0;
-}
-
-.barraNavegacion li {
-  margin: 0;
+  padding: 15px ;
 }
 
 .barraNavegacion a {
@@ -91,7 +85,6 @@ body {
   padding: 10px 20px;
   display: block;
   border-radius: 25px;
-  transition: var(--transicion);
   font-weight: 500;
 }
 
@@ -102,7 +95,7 @@ body {
   box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
 }
 
-/* Hero */
+
 .introduccion {
   background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.7), rgba(52, 220, 27, 0.7));
   
@@ -128,7 +121,7 @@ body {
 }
 
 .introduccion p {
-  font-size: 1.3rem;
+  font-size: 18px;
   margin-bottom: 30px;
   line-height: 1.8;
  
@@ -143,7 +136,6 @@ body {
   border-radius: 30px;
   font-weight: bold;
   font-size: 17px;
-  transition: var(--transicion);
   box-shadow: var(--sombra);
  
 }
@@ -154,16 +146,13 @@ body {
   box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4);
 }
 
-/* Sections */
+
 section {
   padding: 80px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-section:nth-child(even) {
-  background-color:#1a1a1a
-}
 
 h2 {
   font-size: 40px;
@@ -174,19 +163,9 @@ h2 {
   padding-bottom: 20px;
 }
 
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-acento) 0%, var(--color-secundario) 100%);
-  border-radius: 2px;
-}
 
-/* Servicios */
+
+
 #Servicios {
   background-color:#1a1a1a;
 }
@@ -233,7 +212,7 @@ h2::after {
   font-size: 16px;
 }
 
-/* Productos */
+
 #Productos {
   background-color: #1a1a1a;
 }
@@ -286,7 +265,7 @@ h2::after {
   font-size: 19px;
 }
 
-/* Testimonios */
+
 .testimonios-section {
   
   color: var(--color-texto-claro);
@@ -312,7 +291,7 @@ h2::after {
   border-radius: 15px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: var(--transicion);
+ 
 }
 
 .testimonio-card:hover {
@@ -331,7 +310,7 @@ h2::after {
   color: var(--color-acento);
 }
 
-/* Contacto */
+
 .contacto-section {
   background: linear-gradient(135deg, #2d2d2d 0%, var(--color-primario) 100%);
   color: var(--color-texto-claro);
@@ -373,21 +352,16 @@ h2::after {
   background: rgba(255, 255, 255, 0.1);
   color: var(--color-texto-claro);
   font-size: 16px;
-  transition: var(--transicion);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
   border-color: var(--color-acento);
   background: rgba(255, 255, 255, 0.15);
 }
 
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
+
 
 .btn-submit {
   width: 100%;
@@ -399,7 +373,6 @@ h2::after {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: var(--transicion);
 }
 
 .btn-submit:hover {
@@ -448,7 +421,7 @@ footer p {
   color: var(--color-texto-claro);
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
   background:  rgba(255, 255, 255, 0.1);
   padding: 35px;
   border-radius: 20px;
@@ -456,13 +429,17 @@ footer p {
   
 }.articulos{
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: space-around;
 }.titulo-articulo{
   min-height: 200px;
   
 }.titulo-articulo h2{
   color: var(--color-secundario);
+  
+}.articulo-individual:hover{
+  transform: translateY(-5px);
+   background: rgba(255, 255, 255, 0.15);
 }
 .carrusel{
 display: flex;

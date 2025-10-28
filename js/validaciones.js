@@ -4,7 +4,7 @@ function validar() {
     let telefono = document.forms["form"]["telefono"];
     let mail = document.forms["form"]["mail"];
     let consulta = document.forms["form"]["consulta"];
-    
+    let novalidado = true;
     const regexNombre= /^[A-Za-z\s]+$/
     const regexTel=/^\+?[0-9]{7,20}$/
     const regexMail= /^\w+@\w+\.com(\.ar)?$/
@@ -43,50 +43,34 @@ function validar() {
         consulta.style.color='red';
          consulta.style.backgroundColor='white';
     }
-
+   if(regexNombre.test(nombre.value)&&regexTel.test(telefono.value)&&regexMail.test(mail.value) &&regexConsulta.test(consulta.value)){
+   imprimir();
+   }
     
     return false;
+
+   
 }
-
-const ARREGLO_DE_IMAGENES = [
-    'img/sushi.jpg',
-    'img/sushi2.jpg',
-    'img/plato.jpg',
-    'img/canapes.jpg'
-];
-
-
-
-let posicionActual = 0; 
-
-function actualizarImagen() {
+ function imprimir(){
+    const formularioActual= document.getElementById('form');
+    const form= document.createElement('div');
+    form.className="contacto-container";
+    const label1= document.createElement('h3');
+   const label2= document.createElement('h3');
+     const label3= document.createElement('h3');
+       const label4= document.createElement('h3');
+       const titulo = document.createElement('h2');
+    titulo.textContent='FORMULARIO ENVIADO';
+       label1.textContent="Nombre : "+formularioActual.elements['nombre'].value;
+        label2.textContent="Telefono : "+formularioActual.elements['telefono'].value;
+         label3.textContent="EMAIL : "+formularioActual.elements['mail'].value;
+          label4.textContent="Consulta : "+formularioActual.elements['consulta'].value;
+       form.appendChild(titulo);   
+       form.appendChild(label1);
+       form.appendChild(label2);
+       form.appendChild(label3);
+       form.appendChild(label4);
+     formularioActual.insertAdjacentElement('afterend', form);
     
-    const imgElemento = document.getElementById('carrusel-imagen');
-    
-    
-    imgElemento.src = ARREGLO_DE_IMAGENES[posicionActual];
-}
-
-function irAtras() {
-  
-    if (posicionActual === 0) {
-        posicionActual = ARREGLO_DE_IMAGENES.length - 1; 
-    } else {
-       
-        posicionActual--;
+   
     }
-    actualizarImagen();
-}
-
-function irSiguiente() {
-    
-    if (posicionActual === ARREGLO_DE_IMAGENES.length - 1) {
-        posicionActual = 0;
-    } else {
-       
-        posicionActual++;
-    }
-    actualizarImagen();
-}
-actualizarImagen();
-
