@@ -16,6 +16,7 @@ function actualizarImagen() {
     
     
     imgElemento.src = ARREGLO_DE_IMAGENES[posicionActual];
+    
 }
 
 function irAtras() {

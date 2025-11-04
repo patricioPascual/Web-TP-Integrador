@@ -4,7 +4,7 @@ function validar() {
     let telefono = document.forms["form"]["telefono"];
     let mail = document.forms["form"]["mail"];
     let consulta = document.forms["form"]["consulta"];
-    let novalidado = true;
+   // let novalidado = true;
     const regexNombre= /^[A-Za-z\s]+$/
     const regexTel=/^\+?[0-9]{7,20}$/
     const regexMail= /^\w+@\w+\.com(\.ar)?$/

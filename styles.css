@@ -27,10 +27,8 @@ body {
 
 .encabezado {
  background-image: url( "./bamboo.jpg");
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  
 }
 
 .logo {
@@ -62,6 +60,9 @@ body {
 .barraNavegacion {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
+  position: sticky;
+  z-index: 1000;
+  top: 0;
   padding: 0;
   margin-top: 0;
   font-size: 16px;
@@ -70,7 +71,6 @@ body {
 
 .barraNavegacion ul {
   list-style: none;
- 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,7 +374,7 @@ h2 {
   font-weight: bold;
   cursor: pointer;
 }
-
+.carrusel button:hover,
 .btn-submit:hover {
   background: #ffed4e;
   transform: translateY(-2px);
@@ -385,14 +385,9 @@ h2 {
 footer {
   background: var(--color-primario);
   color: var(--color-texto-claro);
-  padding: 40px 20px 20px;
   text-align: center;
 }
 
-.footer-content {
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
 .footer-links {
   display: flex;
@@ -405,7 +400,6 @@ footer {
 .footer-links a {
   color: var(--color-secundario);
   text-decoration: none;
-  transition: var(--transicion);
 }
 
 .footer-links a:hover {
@@ -449,8 +443,11 @@ justify-content: center;
 align-items: center;
 }.carrusel button{
   font-weight: bolder;
-  width: 70px;
+  width: 80px;
+  height:40px ;
   background-color: #ffd700;
   border-radius: 20px;
-  
+}#carrusel-imagen{
+ border-radius: 25px;
+ 
 }
