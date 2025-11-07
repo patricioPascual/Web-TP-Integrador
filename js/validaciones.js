@@ -12,18 +12,30 @@ function validar() {
     const regexTel=/^\+?[0-9]{7,20}$/
     const regexMail= /^\w+@\w+\.com(\.ar)?$/
     const regexConsulta= /^[\s\S]{10,150}$/
-    if (!regexNombre.test(nombre.value)|| nombre.value.length>50) {
+     
+   if (nombre.value.trim()===""){
+    errNombre.style.color='red';
+    errNombre.textContent='Debe ingresar un nombre';
+    validado=false;
+   }
+    else if (!regexNombre.test(nombre.value)) {
          
         errNombre.style.color='red';
         errNombre.textContent='Nombre invalido';
-        validado =false;
-    }else{
+        validado =false; 
+    } 
+    else{
         
         nombre.style.backgroundColor=' ';
         errNombre.textContent=' ';
     }
 
-    if (!regexTel.test(telefono.value)) {
+    if(telefono.value.trim()===""){
+        errTel.style.color='red';
+        errTel.textContent='Debe completar este campo'
+        validado=false; 
+    }
+    else if (!regexTel.test(telefono.value)|| nombre.value.length>50) {
         
         errTel.style.color='red';
         errTel.textContent='Numero de telefono invalido'
@@ -33,8 +45,12 @@ function validar() {
         errTel.textContent=' ';
         telefono.style.backgroundColor=' ';
     }
-
-    if (!regexMail.test(mail.value)) {
+     if (mail.value.trim()===""){
+        errMail.style.color='red';
+       errMail.textContent='Debe Completar este Campo';
+       validado=false; 
+     }
+     else if (!regexMail.test(mail.value)) {
         errMail.style.color='red';
        errMail.textContent='Email Invalido';
        validado=false;
