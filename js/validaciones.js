@@ -1,49 +1,57 @@
 function validar() {
-    
+    const errNombre= document.getElementById("errNombre");
+    const errTel= document.getElementById("errTel");
+    const errMail= document.getElementById("errMail");
+    const errConsulta= document.getElementById('errConsulta');
     let nombre = document.forms["form"]["nombre"];
     let telefono = document.forms["form"]["telefono"];
     let mail = document.forms["form"]["mail"];
     let consulta = document.forms["form"]["consulta"];
-   // let novalidado = true;
+    let validado = true;
     const regexNombre= /^[A-Za-z\s]+$/
     const regexTel=/^\+?[0-9]{7,20}$/
     const regexMail= /^\w+@\w+\.com(\.ar)?$/
     const regexConsulta= /^[\s\S]{10,150}$/
-    if (regexNombre.test(nombre.value)) {
-        nombre.style.color='white'; 
-        nombre.style.backgroundColor = '';
-
+    if (!regexNombre.test(nombre.value)|| nombre.value.length>50) {
+         
+        errNombre.style.color='red';
+        errNombre.textContent='Nombre invalido';
+        validado =false;
     }else{
-        nombre.style.color='red';
-        nombre.style.backgroundColor='white';
-    }
-
-    if (regexTel.test(telefono.value)) {
         
-        telefono.style.color='white';
-        telefono.style.backgroundColor = '';
-    }else{
-        telefono.style.color='red';
-        telefono.style.backgroundColor='white';
+        nombre.style.backgroundColor=' ';
+        errNombre.textContent=' ';
     }
 
-    if (regexMail.test(mail.value)) {
-       mail.style.color='white';
-       mail.style.backgroundColor = '';
-
+    if (!regexTel.test(telefono.value)) {
+        
+        errTel.style.color='red';
+        errTel.textContent='Numero de telefono invalido'
+        validado=false;
+       
     }else{
-        mail.style.color='red';
-         mail.style.backgroundColor='white';
+        errTel.textContent=' ';
+        telefono.style.backgroundColor=' ';
     }
 
-    if (regexConsulta.test(consulta.value)) {
-       consulta.style.color='white';
-       consulta.style.backgroundColor = '';
+    if (!regexMail.test(mail.value)) {
+        errMail.style.color='red';
+       errMail.textContent='Email Invalido';
+       validado=false;
+        
     }else{
-        consulta.style.color='red';
-         consulta.style.backgroundColor='white';
+        
+         errMail.textContent=' ';
     }
-   if(regexNombre.test(nombre.value)&&regexTel.test(telefono.value)&&regexMail.test(mail.value) &&regexConsulta.test(consulta.value)){
+
+    if (!regexConsulta.test(consulta.value)) {
+      errConsulta.style.color='red';  
+      errConsulta.textContent='Envie una Consulta';
+      validado=false;
+    }else{
+        errConsulta.textContent=' ';
+    }
+   if(validado){
    imprimir();
    }
     
